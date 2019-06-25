@@ -5,7 +5,7 @@ from sympy import *
 import locale
 from flaskext.mysql import MySQL
 
-locale.setlocale(locale.LC_ALL,'')
+locale.setlocale(locale.LC_ALL,'en_US.utf-8')
 
 
 
@@ -32,13 +32,38 @@ def index():
     return render_template("advance-form-element.html")
 
 
-
-	return render_template("trazaOP.html")
-
 @app.route('/tablas')
 def tablas():
 
 	return render_template("data-table.html")
+
+@app.route('/ventasdiarias')
+def ventasdiarias():
+	nretiro = 45
+	vretiro = 45000
+	vretiro = locale.currency(vretiro, grouping = true).replace(',','.')
+	ndespacho = 50
+	vdespacho = 50000
+	vdespacho = locale.currency(vdespacho, grouping = true).replace(',','.')
+
+	return render_template("ventasdiarias.html", nretiro = nretiro, vretiro = vretiro, ndespacho = ndespacho, vdespacho = vdespacho)
+
+@app.route('/ventasmensual')
+def ventasmensual():
+	nretiro = 45
+	vretiro = 45000
+	vretiro = locale.currency(vretiro, grouping = true).replace(',','.')
+	ndespacho = 50
+	vdespacho = 50000
+	vdespacho = locale.currency(vdespacho, grouping = true).replace(',','.')
+
+	return render_template("ventasmensual.html", nretiro = nretiro, vretiro = vretiro, ndespacho = ndespacho, vdespacho = vdespacho)
+
+@app.route('/ventaretiro')
+def ventaretiro():
+	nretiro = 45
+
+	return render_template("ventaretiro.html", nretiro = nretiro)
 
 	
 

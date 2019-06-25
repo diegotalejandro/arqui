@@ -1,0 +1,562 @@
+ {% extends "layout.html" %}
+ {% block body %}
+ <div class="basic-form-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcome-list">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <ul class="breadcome-menu">
+                                <li><a href="/">Administrador</a> <span class="bread-slash">/</span>
+                                </li>
+                                <li><span class="bread-blod">Control de ventas del mes</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="basic-form-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sparkline12-list mt-b-30">
+                    <div class="sparkline12-hd">
+                        <div class="main-sparkline12-hd">
+                            <h1>Control de ventas del mes</h1>
+                        </div>
+                    </div>
+                    <div class="sparkline12-graph">
+                        <div class="input-knob-dial-wrap">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="main-sparkline12-hd">
+                                        <h4>Retiro</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Número de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>{{nretiro}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Total de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>{{vretiro}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="main-sparkline12-hd">
+                                        <h4>Despacho</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Número de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>{{ndespacho}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Total de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>{{vdespacho}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="main-sparkline12-hd">
+                                        <h4>Total</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Número total de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>Hola</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <h5>Total de ventas</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <div class="input-mask-title">
+                                        <label>Hola</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--             <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline12-list">
+                        <div class="sparkline12-hd">
+                            <div class="main-sparkline12-hd">
+                                <h3>Agregar Menú Diario</h3>
+                            </div>
+                        </div>
+                        <div class="sparkline12-graph">
+                            <div class="basic-login-form-ad">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="all-form-element-inner">
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="login2 pull-right pull-right-pro">Cliente</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                        <input type="text" name="cliente" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="login2 pull-right pull-right-pro">Inicio Estimado</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                        <div class="input-mark-inner mg-b-22">
+                                                            <input type="text" name="inicio_estimado" class="form-control" data-mask="99/99/9999" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="login2 pull-right pull-right-pro">Termino Estimado</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                        <div class="input-mark-inner mg-b-22">
+                                                            <input type="text" name="termino_estimado" class="form-control" data-mask="99/99/9999" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="login2 pull-right pull-right-pro">Producto</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                        <div class="form-select-list">
+                                                            <select class="form-control custom-select-value" name="producto">
+                                                                <option>Empanda Napolitana</option>
+                                                                <option>Empanada Pino</option>
+                                                                <option>Empanada Camarón</option>
+                                                                <option>Empanada Mechada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="login2 pull-right pull-right-pro">Cantidad</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                        <input type="number" name="cantidad" min=1 step=1 class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline12-list">
+                        <div class="sparkline12-hd">
+                            <div class="main-sparkline12-hd">
+                                <h3>Listado de Materiales</h3>
+                            </div>
+                        </div>
+                        <div class="sparkline12-graph">
+                            <div class="basic-login-form-ad">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="all-form-element-inner">
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <h4>Item</h4>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <h4>Material</h4>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <h4>Unidad Medida</h4>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <h4>Cantidad</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>1</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <label>Queso Gauda Despunte</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="queso" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>2</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Tomate Conserva</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="tomate" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>3</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Maicena</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="maicena" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>4</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Oregano Entero</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="oregano" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>5</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Sal</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="sal" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>6</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>SunGlass</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>Lts</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="sun" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>7</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Queso Crema</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="quesocrema" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>8</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Harina</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="harina" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>9</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Manteca Vegetal Bajo Saturado</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="manteca" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>10</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Agua</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>Lts</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="agua" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>11</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Suero de Leche</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>Lts</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="leche" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>12</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Azucar</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="azucar" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>13</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Propinato de Calcio</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>KG</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="calcio" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>14</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Caja Cafe Tipo 6</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>UN</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="caja" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>15</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Bolsa Empanada 21cmx21cmx40mm</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>UN</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="bolsa" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>16</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Estuche Nap-12</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>UN</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="estuche" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
+                                                        <label>17</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-50 col-sm-50 col-xs-12">
+                                                        <label>Cinta Cera</label>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                        <label>UN</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                        <input type="text" name="cinta" class="form-control input-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline12-list">
+                        <div class="sparkline12-hd">
+                            <div class="main-sparkline12-hd">
+                                <h3>Observaciones</h3>
+                            </div>
+                        </div>
+                        <div class="sparkline12-graph">
+                            <div class="basic-login-form-ad">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="all-form-element-inner">
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <textarea class="form-control" rows="3" name="observaciones"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="login-btn-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-3"></div>
+                                                        <div class="col-lg-9">
+                                                            <div class="login-horizental cancel-wp pull-left form-bc-ele">
+                                                                <button class="btn btn-white" type="reset">Cancelar</button>
+                                                                <button class="btn btn-sm btn-primary login-submit-cs" type="submit">Guardar Cambios</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    {% endblock %}
