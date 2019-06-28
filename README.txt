@@ -6,9 +6,7 @@ Para subir cambios:
 
 Para bajar cambios:
 1.- Git fetch origin
-2.- Apretar ':' (dos puntos nomas)
-3.- Luego 'wq' y enter
-4.- git pull origin(nose si es necesario este, tal vez con lo anterior queda listo el repositorio)
+4.- git pull origin
 5.- Listo :D
 
 Para bajar el repositorio por primera vez:
