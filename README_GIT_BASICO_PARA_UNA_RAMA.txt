@@ -1,5 +1,5 @@
 Para subir cambios:
-1.- git add.
+1.- git add .
 2.- git commit -m "comentario" ("" si va en el comando)
 3.- git push origin master
 4.- listo :D
