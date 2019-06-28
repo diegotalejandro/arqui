@@ -1,9 +1,9 @@
 from app import app
 from flask import render_template,request
 import math
-from sympy import *
+#from sympy import *
 import locale
-from flaskext.mysql import MySQL
+#from flaskext.mysql import MySQL
 
 locale.setlocale(locale.LC_ALL,'en_US.utf-8')
 
@@ -64,6 +64,3 @@ def ventaretiro():
 	nretiro = 45
 
 	return render_template("ventaretiro.html", nretiro = nretiro)
-
-	
-
