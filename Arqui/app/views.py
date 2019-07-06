@@ -3,6 +3,7 @@ from flask import render_template,request
 import math
 #from sympy import *
 import locale
+import socket
 #from flaskext.mysql import MySQL
 
 locale.setlocale(locale.LC_ALL,'en_US.utf-8')
@@ -16,10 +17,33 @@ def OP():
 		menu2 = request.form["menu2"]
 		menu3 = request.form["menu3"]
 
-		print menu1
+		host = '200.14.84.235'
+        port = 5000
+
+        mySocket = socket.socket()
+        mySocket.connect((host,port))
+
+        #message = input(" -> ")
+        message = "00010sinit_dv"
+
+        while message != 'q':
+                #print (message)
+                mySocket.send(message.encode())
+                data = mySocket.recv(1024).decode()
 
 
-		return render_template("agregarMenu.html")
+                print ('Received from server: ' + data)
+                data2 = "".join(data)
+                if data2 == "00000":#"00012sinitOK    z":
+                    print (data)
+                    message = "00001z"
+                message= input(" -> ")
+		print ("compila :D")
+        mySocket.close()
+		#print(menu1)
+
+
+		#return render_template("agregarMenu.html")
 
 	return render_template("agregarMenu.html")
 
