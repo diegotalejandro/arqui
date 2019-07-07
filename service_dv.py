@@ -1,5 +1,9 @@
 
 import socket
+import psycopg2
+
+conn = psycopg2.connect("dbname=postgres")
+cur = conn.cursor()
 
 def Main():
         host = '127.0.0.1'#'200.14.84.235'
@@ -28,6 +32,11 @@ def Main():
                     #print (number)
                     #print (respuesta)
                     message = "000" + str(number) + "_dv__" + respuesta + str(number2)
+                    sql = "select * from public.asistencia;"
+                    cur.execute(sql)
+                    resultados = cur.fetchall()
+                    r1= resultados[0]
+                    message = "000" + str(number) + "_dv__" + str(r1)
                 else:
                     message = "00010sinit_dv__"
                 #message= input(" -> ")
