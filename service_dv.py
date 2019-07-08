@@ -1,8 +1,8 @@
-
+import random
 import socket
 import psycopg2
 
-conn = psycopg2.connect("dbname=postgres")
+conn = psycopg2.connect("dbname=arquidb")
 cur = conn.cursor()
 
 def Main():
@@ -19,24 +19,39 @@ def Main():
                 #print (message)
                 mySocket.send(message.encode())
                 data = mySocket.recv(1024).decode()
-
-
                 #print ('Received from server: ' + data)
                 data2 = "".join(data)
-                if data2[5:10] == "_dv__":#"00012sinitOK    z":
+                if data2[5:10] == "_dv__":
+
                     number = int(data2[0:5])
-                    respuesta = data2[10:number+5-1]
-                    number2 = int(data2[number+5-1:number+5])
-                    number2 = number2 + 1
-                    #print (data)
-                    #print (number)
-                    #print (respuesta)
-                    message = "000" + str(number) + "_dv__" + respuesta + str(number2)
-                    sql = "select * from public.asistencia;"
+                    respuesta = data2[10:number+5]
+                    respuestas = respuesta.split(",")
+
+                    sql = "select * from public.menu where id=" + str(respuestas[4]) + ";"
                     cur.execute(sql)
-                    resultados = cur.fetchall()
-                    r1= resultados[0]
-                    message = "000" + str(number) + "_dv__" + str(r1)
+                    result = cur.fetchall()
+                    print (result)
+                    if result!=[]:
+                        numero = str(random.randrange(10,1000))
+                        sql = "insert into public.delivery values (" + numero
+                        sql = sql + ", '" + str(respuestas[0])
+                        sql = sql + "', '" + str(respuestas[1])
+                        sql = sql + "', '" + str(respuestas[2])
+                        sql = sql + "', '" + str(respuestas[3])
+                        sql = sql + "', '" + str(result[0][1])
+                        sql = sql + "', " + str(result[0][0])
+                        sql = sql + ", " + str(5000)
+                        sql = sql + ", '2019-07-08', '" + str(respuestas[5])
+                        sql = sql + "', '" + str(respuestas[6])
+                        sql = sql + "');"
+                        print (sql)
+                        cur.execute(sql)
+                        conn.commit()
+                        message = "000" + str(10) + "_dv__" + "OK"
+                    else:
+                        message = "000" + str(10) + "_dv__" + "NK"
+                    #resultados = cur.fetchall()
+
                 else:
                     message = "00010sinit_dv__"
                 #message= input(" -> ")

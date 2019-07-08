@@ -1,4 +1,5 @@
 
+import random
 import socket
 import psycopg2
 
@@ -13,7 +14,7 @@ def Main():
         mySocket.connect((host,port))
 
         #message = input(" -> ")
-        message = "00010sinit_mn__"
+        message = "00010sinit_mn2_"
 
         while message != 'q':
                 #print (message)
@@ -21,20 +22,23 @@ def Main():
                 data = mySocket.recv(1024).decode()
                 #print ('Received from server: ' + data)
                 data2 = "".join(data)
-                if data2[5:10] == "_mn__":
-                    sql = "select nombre from public.menu;"
-                    cur.execute(sql)
-                    resultados = cur.fetchall()
-                    message = "000" + str(10) + "_mn__"
-                    for resultado in resultados:
-                        r1 = str(resultado)
-                        r1 = r1.replace("(", "")
-                        r1 = r1.replace("'", "")
-                        r1 = r1.replace(",", "")
-                        r1 = r1.replace(")", "")
-                        message = message + r1 + ","
+                if data2[5:10] == "_mn2_":
+                    number = int(data2[0:5])
+                    respuesta = data2[10:number+5]
+                    print (respuesta)
+                    if respuesta!="":
+                        numero = str(random.randrange(10,1000))
+                        sql = "insert into public.menu values (" + numero
+                        sql = sql + ", '" + str(respuesta)
+                        sql = sql + "' , '2019-07-08');"
+                        print (sql)
+                        cur.execute(sql)
+                        conn.commit()
+                        message = "000" + str(10) + "_mn2_" + "OK"
+                    else:
+                        message = "000" + str(10) + "_mn2_" + "NK"
                 else:
-                    message = "00010sinit_mn__"
+                    message = "00010sinit_mn2_"
                 #message= input(" -> ")
 
         mySocket.close()
