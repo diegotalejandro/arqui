@@ -32,7 +32,8 @@ def Main():
                     result = cur.fetchall()
                     print (result)
                     if result!=[]:
-                        numero = str(random.randrange(10,1000))
+                        numero = str(random.randrange(10,100))
+                        #-----Insert Delivery-----
                         sql = "insert into public.delivery values (" + numero
                         sql = sql + ", '" + str(respuestas[0])
                         sql = sql + "', '" + str(respuestas[1])
@@ -44,6 +45,19 @@ def Main():
                         sql = sql + ", '2019-07-08', '" + str(respuestas[5])
                         sql = sql + "', '" + str(respuestas[6])
                         sql = sql + "');"
+                        print (sql)
+                        cur.execute(sql)
+                        conn.commit()
+                        #-----Insert Ventas------
+                        sql = "insert into public.ventas_re values (" + numero
+                        sql = sql + ", '" + str(respuestas[0])
+                        sql = sql + "', '" + str(respuestas[1])
+                        sql = sql + "', '" + str(respuestas[2])
+                        sql = sql + "', '" + str(respuestas[3])
+                        sql = sql + "', '" + str(result[0][1])
+                        sql = sql + "', " + str(result[0][0])
+                        sql = sql + ", " + str(5000)
+                        sql = sql + ", '2019-07-08');"
                         print (sql)
                         cur.execute(sql)
                         conn.commit()

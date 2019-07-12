@@ -11,7 +11,7 @@ def Main():
 
         menu = """Bienvenido al Restaurant Tan Dao Vien
         elija una opcion:
-        1.-Agregar Menu
+        1.-Agregar Menú
         2.-Ver Menús
         3.-Delivery
         4.-Ver ventas
@@ -118,6 +118,7 @@ def Main():
                 if data2[5:10] == '_mn2_':
                     number = int(data2[0:5])
                     respuesta = data2[12:number+5]
+                    #print (respuesta)
                     #respuestas = respuesta.split(",")
                     #respuestas.pop()
                     #print ("Menús Disponibles:")
